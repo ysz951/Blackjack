@@ -17,6 +17,14 @@ public class Main {
         Card eightHearts = new Card("8", "Hearts", 8, false);
         Card tenClubs = new Card("10", "Clubs", 10, true);
         System.out.println(eightHearts);
+        System.out.println(tenClubs.getSuit());
+        System.out.println(sevenSpades.getValue());
+
+        // print the ten of clubs
+        System.out.println(tenClubs);
+        tenClubs.setTurnedUp(false); //turn over the ten of clubs
+        System.out.println(tenClubs);
+        tenClubs.setValue(11); // give this card more value
         System.out.println(tenClubs);
 
     }
