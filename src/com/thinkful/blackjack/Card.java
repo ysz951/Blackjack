@@ -1,29 +1,23 @@
 package com.thinkful.blackjack;
 
 public class Card {
-    private String suit;
+    private Suit suit;
     private String cardFace;
     private int value;
     private boolean turnedUp;
     public Card() {
-        this.suit = "Spades";
-        this.cardFace = "Ace";
-        this.value = 1;
-        this.turnedUp = false;
+        this("Ace", Suit.SPADES, 1, false);
     }
 
-    public Card(String cardFace, String suit){
-        this.suit = suit;
-        this.cardFace = cardFace;
-        this.value = 1;
-        this.turnedUp = false;
+    public Card(String cardFace, Suit suit){
+        this(cardFace, suit, 1, false);
     }
 
-    public Card(String cardFace, String suit, int value, boolean turnedUp){
-        this.suit = suit;
-        this.cardFace = cardFace;
-        this.value = value;
-        this.turnedUp = turnedUp;
+    public Card(String cardFace, Suit suit, int value, boolean turnedUp){
+        this.setSuit(suit);
+        this.setCardFace(cardFace);
+        this.setValue(value);
+        this.setTurnedUp(turnedUp);
     }
     @Override
     public String toString() {
@@ -31,11 +25,11 @@ public class Card {
                 this.cardFace, this.suit, this.value, this.turnedUp);
     }
 
-    public String getSuit() {
+    public Suit getSuit() {
         return suit;
     }
 
-    public void setSuit(String suit) {
+    public void setSuit(Suit suit) {
         this.suit = suit;
     }
 

@@ -7,15 +7,15 @@ public class Main {
         System.out.println(aceSpades);
 
         // Try the 2 argument constructor
-        Card sevenSpades = new Card("7", "Spades");
-        Card jackClubs = new Card("Jack", "Clubs");
+        Card sevenSpades = new Card("7", Suit.SPADES);
+        Card jackClubs = new Card("Jack", Suit.CLUBS);
 
         System.out.println(sevenSpades);
         System.out.println(jackClubs);
 
         // try the 4 argument constructor
-        Card eightHearts = new Card("8", "Hearts", 8, false);
-        Card tenClubs = new Card("10", "Clubs", 10, true);
+        Card eightHearts = new Card("8", Suit.HEARTS, 8, false);
+        Card tenClubs = new Card("10", Suit.CLUBS, 10, true);
         System.out.println(eightHearts);
         System.out.println(tenClubs.getSuit());
         System.out.println(sevenSpades.getValue());
