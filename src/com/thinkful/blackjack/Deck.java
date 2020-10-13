@@ -21,6 +21,23 @@ public class Deck {
     public void setCards(List<Card> cards) {
         this.cards = cards;
     }
+
+    public void shuffle() {
+        Random ran = new Random();
+        for (int i = 0; i < this.getCards().size(); i++) {
+            Card c = this.getCards().remove(i);
+            int randomNumber = ran.nextInt(this.getCards().size());
+            this.getCards().add(randomNumber, c);
+        }
+    }
+    public Card deal() {
+        if(this.getCards().isEmpty()) {
+            // we need to do something about this
+            return null;
+        }
+        //return the first card
+        return this.getCards().remove(0);
+    }
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
