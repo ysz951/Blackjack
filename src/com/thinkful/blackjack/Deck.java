@@ -1,26 +1,24 @@
 package com.thinkful.blackjack;
-
+import java.util.*;
 public class Deck {
-    public static final int DECK_SIZE = 52;
-
-    private Card[] cards;
+    private List<Card> cards;
 
     public Deck() {
-        this.setCards(new Card[DECK_SIZE]);
+        this.setCards(new ArrayList<>());
         int i = 0;
         for(Suit suit: Suit.values()){
             for(Face face: Face.values()) {
-                this.getCards()[i] = new Card(face, suit);
+                this.getCards().add(new Card(face, suit));
                 i = i + 1;
             }
         }
     }
 
-    public Card[] getCards() {
+    public List<Card> getCards() {
         return cards;
     }
 
-    public void setCards(Card[] cards) {
+    public void setCards(List<Card> cards) {
         this.cards = cards;
     }
     @Override
@@ -30,7 +28,7 @@ public class Deck {
         for (Card c : this.getCards()) {
             sb.append(String.format("%s,", c));
         }
-        if (this.getCards().length > 0) {
+        if (this.getCards().size() > 0) {
             sb.deleteCharAt(sb.length() - 1); //remove the extraneous comma
         }
         sb.append("]");
