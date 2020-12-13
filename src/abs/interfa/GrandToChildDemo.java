@@ -5,8 +5,10 @@ public class GrandToChildDemo {
         GrandFather gf = new Child();
         Father f = new Child();
         Child c = new Child();
-        f.Father();
-        f.print();
+        GrandFather agf = new AnoterChild();
+        gf.print();
+        agf.print();
+        c.child();
 
     }
 }
