@@ -6,5 +6,7 @@ public class InterfaceDemo {
         FatherInterface an = new AnotherGetInter("Another");
         ge.show();
         an.show();
+        GetInterface get = new GetInterface("tt");
+        get.getInt();
     }
 }

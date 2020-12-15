@@ -8,4 +8,7 @@ public class GetInterface implements FatherInterface{
     public GetInterface(String name) {
         this.name = name;
     }
+    public void getInt(){
+        System.out.println("getInt");
+    }
 }
