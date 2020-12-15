@@ -9,6 +9,7 @@ public class GrandToChildDemo {
         gf.print();
         agf.print();
         c.child();
-
+        c.Father();
+        c.GrandFa();
     }
 }
