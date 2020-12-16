@@ -13,4 +13,8 @@ public class Child extends Father{
     public void Father() {
         System.out.println("child father");
     }
+
+    public void callGran() {
+        GrandFa();
+    }
 }
